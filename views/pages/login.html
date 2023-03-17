@@ -1,0 +1,19 @@
+{% extends 'pages/base.html' %}
+{% from 'components/form.html' import field %}
+{% block navbar%}
+{% endblock %}
+
+{% block content%}
+    <form class="form-card" action="/users/login" method="post">
+        <a href="/">jupiter merch</a>
+        <div class="fields">
+            {{field('email', 'email', 'email', false, 'email')}}
+            {{field('password', 'password', 'password', True, 'password')}}
+        </div>
+            <button type="submit" class="linkbtn" style="width:300px;cursor: pointer;">login</button>
+            <p><a href="/">forgot password?</a></p>
+            <p>Don't have an account? <a href="/users/new">register here</a></p>
+    </form>
+{% endblock %}
+{% block footer%}
+{% endblock %}

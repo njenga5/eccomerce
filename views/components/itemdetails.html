@@ -1,0 +1,19 @@
+{% from "components/linkbtn.html" import linkbtn %}
+{% macro item(img_url, title, colors, sizes, price, description) %}
+<div class="item">
+    <div class="item-detail">
+        <img src="{{img_url}}" alt="{{title}}" width="300" height="300">
+        <div class="detail-right">
+            <h2>{{title}}</h2>
+            <p>size: {% for size in sizes %}<span>{{size}}</span> {% endfor %}</p>
+            <p>color: {% for color in colors %}<span>{{color}}</span>{% endfor %}</p>
+            <p>price: <span class="price">KSh {{price}}</span></p>
+            <div class="btn-container" style="margin-top: 10px;">
+                {{linkbtn('add to cart', '/cart')}}
+                {{linkbtn('order now')}}
+            </div>
+        </div>
+        <div class="description">{{description}}</div>
+    </div>
+</div>
+{% endmacro%}

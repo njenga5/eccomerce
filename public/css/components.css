@@ -1,0 +1,133 @@
+.products a {
+    text-decoration: none;
+    color: #eb7950;
+}
+.products .card {
+  border-radius: 5px;
+  box-shadow: 5px 3px 10px #8f7b7b;
+  margin: 10px 0;
+  text-align: center;
+  padding: 3px;
+}
+
+.products .card:hover {
+  box-shadow: 5px 3px 20px #8f7b7b;
+}
+
+.products .card img {
+  width: 100%;
+  /* height: auto; */
+  object-fit: contain;
+}
+
+.products .card .card-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.products .card .title {
+  padding: 5px;
+  letter-spacing: 1px;
+}
+
+.linkbtn {
+    text-decoration: none;
+    color: #eb7950;
+    outline: none;
+    padding: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    border: 1px solid #eb7950;
+    border-radius: 5px;
+}
+
+.linkbtn:hover {
+    color: #fff;
+    background: #eb7950;
+}
+
+.fields .field {
+  position: relative;
+}
+
+
+.fields .field input {
+  font-size: 1.2rem;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #eb7950;
+  width: 100%;
+  color: #eb7950;
+}
+
+.fields .field label {
+  position: absolute;
+  color: #eb7950;
+  text-transform: capitalize;
+  bottom: 0;
+  left: 0;
+  pointer-events: none;
+  transition: .5s;
+  font-size: 1.2rem;
+}
+
+.fields .field input:focus ~ label,
+.fields .field input:valid ~ label {
+  bottom: 100%;
+  font-size: 1rem;
+}
+.items.specific .item {
+  width: 90%;
+  margin: 10px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 25px #8f7b7b;
+}
+
+.items.specific .item .item-detail {
+  display: flex;
+  justify-content: space-evenly;
+  column-gap: 10px;
+}
+
+.items.specific .item img {
+  object-fit: contain;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.items.specific .detail-right {
+  display: flex;
+  flex-flow: column wrap;
+  row-gap: 10px;
+  flex: 33.33333%
+}
+
+.detail-right h2{
+  color: #eb7950;
+  font-weight: 500;
+}
+
+.detail-right p{
+  color: #8f7b7b;
+  text-transform: capitalize;
+  font-size: larger;
+  margin-bottom: 3px;
+}
+
+.detail-right span {
+  padding: 5px;
+  border: 1px solid #eb7950;
+  color: #eb7950;
+  border-radius: 5px;
+  float: right;
+  margin-right: 3px;
+}
+
+.item-detail .description {
+  color: #312e2e;
+  border-left: 3px solid #eb7950;
+  padding-left: 5px;
+  flex: 33.3333%
+}

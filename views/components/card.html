@@ -1,0 +1,12 @@
+{% macro card(img_url, title, price)%}
+
+<div class="card">
+    <img src={{img_url}} alt="" width="300" height="300">
+    <div class="card-content">
+        <h2 class="title">{{title}}</h3>
+        <span class="price">KSh {{price}}</span>
+    </div>
+</div>
+
+{% endmacro %}
+

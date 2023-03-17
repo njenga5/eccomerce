@@ -1,0 +1,44 @@
+{% extends "pages/base.html" %}
+{% from "components/linkbtn.html" import linkbtn %}
+{% from "components/card.html" import card %}
+
+{% block btns %}
+    {% if data.user %}
+        {{linkbtn('cart', '/cart')}}
+        {{linkbtn(data.user.lastname, '/')}}
+    {% else %}
+        {{super()}}
+    {% endif %}
+{% endblock %}
+{% block content %}
+{% block category%}
+<section class="categories">
+    <h2 class="section-title"><i class="fa-brands fa-hotjar"></i> hot categories</h2>
+    <div class="btn-container">
+        {% for i in ["all","hood", "pullover", "sweatpant", "shoe"] %}
+            {% if loop.index0 == 0%}
+                {{linkbtn(i+'s', '/merch')}}
+            {% else %}
+                {{linkbtn(i+'s', '/merch/categories?category='+i)}}
+            {% endif %}
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
+<section class="items">
+    <h2 class="section-title"><i class="fa-solid fa-heart"></i> you may like</h2>
+    <div class="products">
+        {% block products %}
+        {% for item in products %}
+        <a href="/merch/detail/{{item.rowid}}">
+            {{card(item.image_urls|first, item.title, item.price)}} 
+        </a>
+        {% else %}
+            <p>There are no items to display</p>
+        {% endfor %}
+        {% endblock %}
+    </div>
+</section>
+
+
+{% endblock %}

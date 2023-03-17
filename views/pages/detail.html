@@ -1,0 +1,16 @@
+{% extends 'pages/home.html' %}
+{% from 'components/itemdetails.html' import item %}
+{% block category %}
+<section class="items specific">
+    {{item(data.image_urls|first, data.title, data.color, data.size, data.price, data.description)}}
+</section>
+{% endblock %}
+{% block products%}
+{% for item in data.related %}
+    <a href="/merch/detail/{{item.rowid}}">
+        {{card(item.image_urls|first, item.title, item.price)}}
+    </a>
+{% else %}
+    <p>No related items</p>
+{% endfor %}
+{% endblock %}

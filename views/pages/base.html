@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="An Ecommerce Site" />
+    <meta name="keywords" content="hoods, sweatpants, pullovers, " />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <link rel="stylesheet" href="/static/css/components.css" />
+    {% block head%}
+    <title>Jupiter Merch</title>
+    {% endblock %}
+  </head>
+  <body>
+    {% block navbar %}
+    <nav>
+      <a href="/">Jupiter Merch</a>
+      <div class="right">
+        <div class="search">
+          <input type="text" id="search" required />
+          <label for="search">Search</label>
+        </div>
+        {% block btns %}
+        <div class="btns">
+          <a href="/users/login">login</a>
+          <a href="/users/new">sign up</a>
+        </div>
+        {% endblock %}
+      </div>
+    </nav>
+    {% endblock %}
+    <main class="container">{% block content %}{% endblock %}</main>
+    {% block footer %}
+    <footer>
+      <div class="footer-info">
+        <h3>Shopping Guide</h3>
+        <div class="links">
+          <a href="">How to Register</a>
+          <a href="">How to Add An Item to Cart</a>
+          <a href="">Forgot my Password</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <h3>Help Center</h3>
+        <div class="links">
+          <a href="">After Sale Policy</a>
+          <a href="">Jupiter Privacy Policy</a>
+          <a href="">Delivery and Shipping</a>
+          <a href="">How to Make Payment</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <h3>Business</h3>
+        <div class="links">
+          <a href="">Become A Seller</a>
+          <a href="">Seller Center</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <h3>Jupiter International</h3>
+        <div class="links">
+          <a href="">Contact Us</a>
+          <a href="">Jupiter Mobile App</a>
+        </div>
+      </div>
+      <div class="footer-info">
+        <h3>Stay Connected</h3>
+        <div class="links social">
+          <a href="https://www.facebook.com"><i class="fa-brands fa-facebook"></i> Facebook</a>
+          <a href="https://www.instagram.com"><i class="fa-brands fa-instagram"></i> Instagram</a>
+          <a href="https://www.twitter.com"><i class="fa-brands fa-twitter"></i> Twitter</a>
+        </div>
+      </div>
+      <p id="copyright">&copy; Jupiter Merc </p>
+    </footer>
+    {% endblock %}
+    <script src="/static/js/script.js"></script>
+  </body>
+</html>
